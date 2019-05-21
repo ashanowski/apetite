@@ -11,8 +11,6 @@ body {
 }
 
 header {
-
-
   .showcase {
     background-image: url("../assets/petsbg.jpg");
     height: 90vh;
@@ -25,8 +23,8 @@ header {
     align-items: center;
 
     .content {
-      width: 664px;
-      height: 350px;
+      width: 750px;
+      height: 450px;
       background-color: rgba($color: $regalia, $alpha: 0.8);
       text-align: center;
       color: $honeydew;
@@ -42,28 +40,131 @@ header {
 
       // Title - Apetite + description
 
-      .title {
-        font-size: 180px;
-        font-family: 'Shadows Into Light', cursive;
-        margin-bottom: 0;
-        margin-top: -20px;
-      }
-      .desc {
-        font-size: 40px;
-        font-family: 'Muli', sans-serif;
-        margin-top: -20px;
-      }
-
-      // Login form
-      .login-form {
+      #info {
+        display: flex;
         flex-direction: column;
-        display: none;
+        align-items: center;
+        justify-content: center;
+        
+        .title {
+          font-size: 180px;
+          margin-top: -80px;
+          font-family: 'Shadows Into Light', cursive;
+          margin-bottom: 0;
+        }
+        .desc {
+          font-size: 40px;
+          font-family: 'Muli', sans-serif;
+          margin-top: -20px;
+        }
+      }
+      // Login form
 
-        input {
+      #login-form {
+        display: flex;
+      }
+
+      #register-form {
+        display: flex;
+
+        .group {
           margin-bottom: 20px;
         }
       }
 
+      ._form {
+        flex-direction: column;
+
+        h2 {
+          font-size: 40px;
+          color: $honeydew;
+        }
+
+        .group {
+          position: relative;
+          margin-bottom: 30px;
+
+          input {
+            font-size: 18px;
+            padding: 10px 10px 10px 10px;
+            border: none;
+            color: $honeydew;
+            border-bottom: 1px solid #757575;
+            background-color: $darkpurple;
+            display: block;
+            width: 300px;
+          }
+
+          input:focus {
+            outline: none;
+          }
+
+          .bar:before, .bar:after {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 1px;
+            position: absolute;
+            background: $turquoise;
+            transition: 0.2 ease all;
+          }
+
+          .bar:before {
+            left: 50%;
+          }
+
+          .bar:after {
+            right: 50%;
+          }
+
+          input:focus ~ .bar:before, input:focus ~ .bar:after {
+            width: 50%;
+          }
+
+          .highlight {
+            position: absolute;
+            height: 80%;
+            width: 100px;
+            top: 25%;
+            left: 0;
+            pointer-events: none;
+            opacity: 0.5;
+          }
+          /* active state */
+          input:focus ~ .highlight {
+            -webkit-animation:inputHighlighter 0.3s ease;
+            -moz-animation:inputHighlighter 0.3s ease;
+            animation:inputHighlighter 0.3s ease;
+          }
+
+          /* ANIMATIONS ================ */
+          @-webkit-keyframes inputHighlighter {
+            from { background:#5264AE; } to { width:0; background:transparent; }
+          }
+          @-moz-keyframes inputHighlighter {
+            from { background:#5264AE; }to { width:0; background:transparent; }
+          }
+          @keyframes inputHighlighter {
+          from { background:#5264AE; } to { width:0; background:transparent; }
+          }
+        }
+
+        button {
+          width: 50%;
+          align-self: center;
+          margin-top: -10px;
+          padding: 20px 40px;
+          border: 0.16em solid rgba(0, 0, 0, 0.9);
+          text-decoration: none;
+          transition: all 0.2s;
+          background-color: $honeydew;
+        }
+
+        button:hover {
+          background-color: $regalia;
+          color: $honeydew;
+        }
+      }
     }
   }
 }

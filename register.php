@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include("comps/head.html") ?>
 <body>
   <header>
@@ -7,12 +8,10 @@
     <!-- Showcase -->
     <section class="showcase">
       <div class="content">
-        <?php include("comps/logo.php") ?>
+        <?php include("comps/register-form.php") ?>
       </div>
     </section>
   </header>
-
-
   <?php include("comps/footer.php") ?>
 </body>
 </html>

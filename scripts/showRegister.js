@@ -1,11 +1,11 @@
-function showLogin() {
+function showRegister() {
   var info = document.getElementById('info')
   var login = document.getElementById('login-form')
   var register = document.getElementById('register-form')
 
   info.style.display = 'none'
-  login.style.display = 'flex'
-  register.style.display = 'none'
+  login.style.display = 'none'
+  register.style.display = 'flex'
   // var fadeInEffect = setInterval(function () {
   //   if (!info.style.opacity) {
   //     info.style.opacity = 1;
