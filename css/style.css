@@ -1,0 +1,44 @@
+body {
+  margin: 0; }
+
+header .showcase {
+  background-image: url("../assets/petsbg.jpg");
+  height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  header .showcase .content {
+    width: 664px;
+    height: 350px;
+    background-color: rgba(65, 51, 122, 0.8);
+    text-align: center;
+    color: #ecfee8;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    color: #ecfee8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    header .showcase .content .title {
+      font-size: 180px;
+      font-family: 'Shadows Into Light', cursive;
+      margin-bottom: 0;
+      margin-top: -20px; }
+    header .showcase .content .desc {
+      font-size: 40px;
+      font-family: 'Muli', sans-serif;
+      margin-top: -20px; }
+    header .showcase .content .login-form {
+      flex-direction: column;
+      display: none; }
+      header .showcase .content .login-form input {
+        margin-bottom: 20px; }
+
+/*# sourceMappingURL=style.css.map */

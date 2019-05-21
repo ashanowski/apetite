@@ -1,0 +1,35 @@
+// Colors
+$darkpurple: #331e36;
+$regalia: #41337a;
+$airblue: #6ea4bf;
+$turquoise: #c2efeb;
+$honeydew: #ecfee8;
+
+nav {
+  background-color: $regalia;
+  height: 60px;
+  width: 100%;
+  color: $honeydew;
+
+  ul {
+    display: flex;
+    margin: 0;
+
+    li {
+      list-style: none;
+      margin: 20px;
+
+      a {
+        color: $honeydew;
+      }
+
+      a:link {
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: $turquoise;
+      }
+    }
+  }
+}

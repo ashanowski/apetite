@@ -1,0 +1,69 @@
+// Colors
+$darkpurple: #331e36;
+$regalia: #41337a;
+$airblue: #6ea4bf;
+$turquoise: #c2efeb;
+$honeydew: #ecfee8;
+
+
+body {
+  margin: 0;
+}
+
+header {
+
+
+  .showcase {
+    background-image: url("../assets/petsbg.jpg");
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      width: 664px;
+      height: 350px;
+      background-color: rgba($color: $regalia, $alpha: 0.8);
+      text-align: center;
+      color: $honeydew;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 60px;
+      padding-right: 60px;
+      color: $honeydew;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      // Title - Apetite + description
+
+      .title {
+        font-size: 180px;
+        font-family: 'Shadows Into Light', cursive;
+        margin-bottom: 0;
+        margin-top: -20px;
+      }
+      .desc {
+        font-size: 40px;
+        font-family: 'Muli', sans-serif;
+        margin-top: -20px;
+      }
+
+      // Login form
+      .login-form {
+        flex-direction: column;
+        display: none;
+
+        input {
+          margin-bottom: 20px;
+        }
+      }
+
+    }
+  }
+}

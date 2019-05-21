@@ -1,0 +1,15 @@
+// Colors
+$darkpurple: #331e36;
+$regalia: #41337a;
+$airblue: #6ea4bf;
+$turquoise: #c2efeb;
+$honeydew: #ecfee8;
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $honeydew;
+  height: 60px;
+  background-color: $regalia;
+}
