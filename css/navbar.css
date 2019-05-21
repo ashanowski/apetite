@@ -1,19 +1,39 @@
-nav {
-  background-color: #41337a;
+nav a {
+  color: #ecfee8;
+  background: #41337a;
+  display: block;
   height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.4s; }
+
+a:hover {
+  background: #6ea4bf; }
+
+nav ul {
+  list-style: none;
+  display: flex; }
+
+nav li {
   width: 100%;
-  color: #ecfee8; }
-  nav ul {
-    display: flex;
-    margin: 0; }
-    nav ul li {
-      list-style: none;
-      margin: 20px; }
-      nav ul li a {
-        color: #ecfee8; }
-      nav ul li a:link {
-        text-decoration: none; }
-      nav ul li a:hover {
-        color: #c2efeb; }
+  text-align: center;
+  position: relative; }
+
+nav li:hover .submenu > li {
+  display: block;
+  top: 0px; }
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%; }
+  .submenu li {
+    display: none;
+    position: absolute;
+    position: relative;
+    top: 0px; }
 
 /*# sourceMappingURL=navbar.css.map */

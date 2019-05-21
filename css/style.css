@@ -1,12 +1,13 @@
-body {
-  margin: 0; }
+* {
+  margin: 0;
+  padding: 0; }
 
 header .showcase {
   background-image: url("../assets/petsbg.jpg");
   height: 90vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;

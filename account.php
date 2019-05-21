@@ -1,6 +1,8 @@
 <?php
-session_start()
-
+session_start();
+if (!isset($_SESSION['logged'])){
+  header('Location login.php');
+}
 ?>
 <?php include("comps/head.html") ?>
 <body>
@@ -8,15 +10,12 @@ session_start()
     <!-- Navbar -->
     <?php include("comps/navbar.php") ?>
 
-    <!-- Showcase -->
-    <section class="showcase">
-      <div class="content">
-        <?php include("comps/logo.php") ?>
-      </div>
+    <section>
+      <h1>Logowanie powiodło się! Gratulacje!!!!</h1>
     </section>
-  </header>
 
 
+  <!-- Footer -->
   <?php include("comps/footer.php") ?>
 </body>
 </html>

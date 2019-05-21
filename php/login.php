@@ -11,7 +11,9 @@
 
     $connection = @new mysqli($host, $db_user, $db_pass, $db_name);
 
-    if ($connection->connect_errno!=0) echo "Error: ".$connection->connect_errno;
+    if ($connection->connect_errno!=0){
+      echo "Error: ".$connection->connect_errno;
+    }
     else
     {
         $login = $_POST['login'];
@@ -40,7 +42,7 @@
 
                     $result->free_result();
 
-                    header('Location: test.php');
+                    header('Location: ../account.php');
                 } 
                 else 
                 {

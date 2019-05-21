@@ -4,11 +4,15 @@
     <li><a href="#">Sklep</a></li>
     <li><a href="#">O nas</a></li>
     <li><a href="#">Kontakt</a></li>
-    <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>
-    <li><a href="#">Wyloguj się</a></li>
+    <?php if (isset($_SESSION['logged']) && $_SESSION['logged'] == true): ?>
+    <li><a>Konto<span class="arrow">&#x25BC;</span></a>
+      <ul class="submenu">
+        <li><a href="#">Ustawienia</a></li>
+        <li><a href="php/logout.php">Wyloguj się</a></li>
+      </ul>
+    </li>
     <?php else: ?>
-    <li><a href="login.php">Zaloguj</a></li>
-    <li><a href="register.php">Zarejestruj się</a></li>
+    <li><a href="login.php" id="flex-end">Zaloguj</a></li>
     <?php endif; ?>
   </ul>
 </nav>
