@@ -43,6 +43,13 @@ header .showcase {
         margin-top: -20px; }
     header .showcase .content #login-form {
       display: flex; }
+      header .showcase .content #login-form #register-link {
+        color: white;
+        margin-top: 20px;
+        text-decoration: none; }
+      header .showcase .content #login-form #register-link:hover {
+        color: #c2efeb;
+        background-color: rgba(0, 0, 0, 0); }
     header .showcase .content #register-form {
       display: flex; }
       header .showcase .content #register-form .group {
@@ -51,7 +58,8 @@ header .showcase {
       flex-direction: column; }
       header .showcase .content ._form h2 {
         font-size: 40px;
-        color: #ecfee8; }
+        color: #ecfee8;
+        margin-bottom: 20px; }
       header .showcase .content ._form .group {
         position: relative;
         margin-bottom: 30px;
