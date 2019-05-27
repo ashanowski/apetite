@@ -1,0 +1,39 @@
+// Colors
+$darkpurple: #331e36;
+$regalia: #41337a;
+$airblue: #6ea4bf;
+$turquoise: #c2efeb;
+$honeydew: #ecfee8;
+
+
+.inventory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border: 1px black solid;
+  width: 50%;
+  align-items: center;
+
+  .item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .item-image {
+      img {
+        width: 50%;
+      }
+    }
+
+    .item-desc {
+      align-items: center;
+    }
+  }
+
+}

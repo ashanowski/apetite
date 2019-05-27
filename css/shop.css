@@ -1,0 +1,22 @@
+.inventory {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border: 1px black solid;
+  width: 50%;
+  align-items: center; }
+  .item .item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .item .item-details .item-image img {
+      width: 50%; }
+    .item .item-details .item-desc {
+      align-items: center; }
+
+/*# sourceMappingURL=shop.css.map */
