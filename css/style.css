@@ -155,15 +155,5 @@ header .showcase .content ._form button:hover {
   background-color: #41337a;
   color: #ecfee8;
 }
-header .showcase .shop {
-  padding: 50px;
-  background-color: #757575;
-}
-header .showcase .shop #inventory {
-  width: 50%;
-}
-header .showcase .shop #inventory .inv_name {
-  font-size: 50%;
-}
 
 /*# sourceMappingURL=style.css.map */

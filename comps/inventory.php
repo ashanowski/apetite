@@ -26,12 +26,28 @@
     }
     $connection->close();
 
-    foreach($inventory as $item)
-    {
-        echo "id : ".$item["id"]."  -  Name:".$item["name"];
-    }
+   // foreach($inventory as $item)
+   // {
+   //     echo "id : ".$item["id"]."  -  Name:".$item["name"];
+   // }
 ?>
-
+<div class="inventory">
+    <div class="inv_image">
+        <img src="assets/example_image.jpg" alt="">
+    </div>
+    <div class="inv_name">
+        <h2>Royal Canin Size</h2>
+    </div>
+    <div class="inv_weight">
+        <p>18kg</p>
+    </div>
+    <div class="inv_price">
+        <h4>180.00zł</h4>
+    </div>
+    <div class="add_button">
+        <button type="button">Dodaj do koszyka</button>
+    </div>
+</div>
 
 
 </html>
