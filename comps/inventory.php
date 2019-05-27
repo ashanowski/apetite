@@ -31,15 +31,19 @@
    //     echo "id : ".$item["id"]."  -  Name:".$item["name"];
    // }
 ?>
+<div class="display">
+    <h1>Przeglądaj asortyment</h1>
+</div>
+
 <div class="inventory">
     <div class="inv_image">
-        <img src="assets/example_image.jpg" alt="">
+        <img src="assets/example_image.jpg" alt="" height="250">
     </div>
     <div class="inv_name">
         <h2>Royal Canin Size</h2>
     </div>
     <div class="inv_weight">
-        <p>18kg</p>
+        <p>Karma dla psa, 18kg</p>
     </div>
     <div class="inv_price">
         <h4>180.00zł</h4>

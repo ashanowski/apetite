@@ -5,9 +5,11 @@
     <!-- Navbar -->
     <?php include("comps/navbar.php") ?>
   </header>
-
-  <?php include("comps/inventory.php") ?>
   
+  <main>
+    <?php include("comps/inventory.php") ?>
+  </main>
+
   <?php include("comps/footer.php") ?>
 </body>
 </html>
