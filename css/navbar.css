@@ -7,33 +7,40 @@ nav a {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: background 0.4s; }
+  transition: background 0.4s;
+}
 
 a:hover {
-  background: #6ea4bf; }
+  background: #6ea4bf;
+}
 
 nav ul {
   list-style: none;
-  display: flex; }
+  display: flex;
+}
 
 nav li {
   width: 100%;
   text-align: center;
-  position: relative; }
+  position: relative;
+}
 
 nav li:hover .submenu > li {
   display: block;
-  top: 0px; }
+  top: 0px;
+}
 
 .submenu {
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 100%; }
-  .submenu li {
-    display: none;
-    position: absolute;
-    position: relative;
-    top: 0px; }
+  width: 100%;
+}
+.submenu li {
+  display: none;
+  position: absolute;
+  position: relative;
+  top: 0px;
+}
 
 /*# sourceMappingURL=navbar.css.map */
