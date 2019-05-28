@@ -1,7 +1,6 @@
 <!-- Login -->
 <form action="php/login.php" method="post" class="_form" id="login-form">
-  <h2>Zaloguj się</h2>
-
+  <h2 class="form-title">Zaloguj się</h2>
   <div class="group">
     <input type="text"
             placeholder="Login"
@@ -19,6 +18,7 @@
     <span class="bar"></span>
   </div>
   <button type="submit">Zaloguj się</button>
+  <a href="register.php" id="register-link">Nie masz jeszcze konta? Zarejestruj się!</a>
 </form>
 <!-- End Login -->
 <?php if(isset($_SESSION['register_success'])): ?>
