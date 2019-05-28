@@ -1,6 +1,7 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 header .showcase {
   background-image: url("../assets/petsbg.jpg");
@@ -104,33 +105,44 @@ header .showcase {
           animation: inputHighlighter 0.3s ease; }
 @-webkit-keyframes inputHighlighter {
   from {
-    background: #5264AE; }
+    background: #5264AE;
+  }
   to {
     width: 0;
-    background: transparent; } }
+    background: transparent;
+  }
+}
 @-moz-keyframes inputHighlighter {
   from {
-    background: #5264AE; }
+    background: #5264AE;
+  }
   to {
     width: 0;
-    background: transparent; } }
+    background: transparent;
+  }
+}
 @keyframes inputHighlighter {
   from {
-    background: #5264AE; }
+    background: #5264AE;
+  }
   to {
     width: 0;
-    background: transparent; } }
-      header .showcase .content ._form button {
-        width: 50%;
-        align-self: center;
-        margin-top: -10px;
-        padding: 20px 40px;
-        border: 0.16em solid rgba(0, 0, 0, 0.9);
-        text-decoration: none;
-        transition: all 0.2s;
-        background-color: #ecfee8; }
-      header .showcase .content ._form button:hover {
-        background-color: #41337a;
-        color: #ecfee8; }
+    background: transparent;
+  }
+}
+header .showcase .content ._form button {
+  width: 50%;
+  align-self: center;
+  margin-top: -10px;
+  padding: 20px 40px;
+  border: 0.16em solid rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+  transition: all 0.2s;
+  background-color: #ecfee8;
+}
+header .showcase .content ._form button:hover {
+  background-color: #41337a;
+  color: #ecfee8;
+}
 
 /*# sourceMappingURL=style.css.map */

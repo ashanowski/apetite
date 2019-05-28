@@ -1,7 +1,7 @@
 <nav>
   <ul>
     <li><a href="index.php">Strona główna</a></li>
-    <li><a href="#">Sklep</a></li>
+    <li><a href="shop.php">Sklep</a></li>
     <li><a href="#">O nas</a></li>
     <li><a href="#">Kontakt</a></li>
     <?php if (isset($_SESSION['logged']) && $_SESSION['logged'] == true): ?>
