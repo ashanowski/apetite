@@ -10,15 +10,27 @@ $honeydew: #ecfee8;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color:honeydew;
+  
+}
+.sort {
+  display: flex;
+  background-color: ivory;
+  flex-direction: column;
+  margin: 10px;
+  width: 50%;
+  align-items: center;
+  
 }
 
 .item {
   display: flex;
   flex-direction: column;
   margin: 10px;
-  border: 1px black solid;
+  //border: 1px black solid;
   width: 50%;
   align-items: center;
+  background-color: ivory;
 
   .item-details {
     display: flex;
@@ -27,12 +39,27 @@ $honeydew: #ecfee8;
 
     .item-image {
       img {
-        width: 90%;
+        width: 60%;
       }
     }
 
     .item-desc {
       align-items: center;
+
+      button {
+        margin-top: 10px;
+        font-size: 20px;
+        padding: 10px 24px;
+        border-radius: 4px;
+        color: #ecfee8;
+        background-color: #41337a;
+        border: none;
+        transition: all 0.2s;
+      }
+      button:hover {
+        background-color: $turquoise;
+        color: #331e36;
+    }
     }
   }
 

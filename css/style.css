@@ -12,97 +12,118 @@ header .showcase {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
-  header .showcase .content {
-    width: 750px;
-    height: 450px;
-    background-color: rgba(65, 51, 122, 0.8);
-    text-align: center;
-    color: #ecfee8;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 60px;
-    padding-right: 60px;
-    color: #ecfee8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; }
-    header .showcase .content #info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center; }
-      header .showcase .content #info .title {
-        font-size: 180px;
-        margin-top: -80px;
-        font-family: 'Shadows Into Light', cursive;
-        margin-bottom: 0; }
-      header .showcase .content #info .desc {
-        font-size: 40px;
-        font-family: 'Muli', sans-serif;
-        margin-top: -20px; }
-    header .showcase .content #login-form {
-      display: flex; }
-      header .showcase .content #login-form #register-link {
-        color: white;
-        margin-top: 20px;
-        text-decoration: none; }
-      header .showcase .content #login-form #register-link:hover {
-        color: #c2efeb;
-        background-color: rgba(0, 0, 0, 0); }
-    header .showcase .content #register-form {
-      display: flex; }
-      header .showcase .content #register-form .group {
-        margin-bottom: 20px; }
-    header .showcase .content ._form {
-      flex-direction: column; }
-      header .showcase .content ._form h2 {
-        font-size: 40px;
-        color: #ecfee8;
-        margin-bottom: 20px; }
-      header .showcase .content ._form .group {
-        position: relative;
-        margin-bottom: 30px;
-        /* active state */
-        /* ANIMATIONS ================ */ }
-        header .showcase .content ._form .group input {
-          font-size: 18px;
-          padding: 10px 10px 10px 10px;
-          border: none;
-          color: #ecfee8;
-          border-bottom: 1px solid #757575;
-          background-color: #331e36;
-          display: block;
-          width: 300px; }
-        header .showcase .content ._form .group input:focus {
-          outline: none; }
-        header .showcase .content ._form .group .bar:before, header .showcase .content ._form .group .bar:after {
-          content: '';
-          height: 2px;
-          width: 0;
-          bottom: 1px;
-          position: absolute;
-          background: #c2efeb;
-          transition: 0.2 ease all; }
-        header .showcase .content ._form .group .bar:before {
-          left: 50%; }
-        header .showcase .content ._form .group .bar:after {
-          right: 50%; }
-        header .showcase .content ._form .group input:focus ~ .bar:before, header .showcase .content ._form .group input:focus ~ .bar:after {
-          width: 50%; }
-        header .showcase .content ._form .group .highlight {
-          position: absolute;
-          height: 80%;
-          width: 100px;
-          top: 25%;
-          left: 0;
-          pointer-events: none;
-          opacity: 0.5; }
-        header .showcase .content ._form .group input:focus ~ .highlight {
-          -webkit-animation: inputHighlighter 0.3s ease;
-          -moz-animation: inputHighlighter 0.3s ease;
-          animation: inputHighlighter 0.3s ease; }
+  align-items: center;
+}
+header .showcase .content {
+  width: 750px;
+  height: 450px;
+  background-color: rgba(65, 51, 122, 0.8);
+  text-align: center;
+  color: #ecfee8;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  color: #ecfee8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header .showcase .content #info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .showcase .content #info .title {
+  font-size: 180px;
+  margin-top: -80px;
+  font-family: "Shadows Into Light", cursive;
+  margin-bottom: 0;
+}
+header .showcase .content #info .desc {
+  font-size: 40px;
+  font-family: "Muli", sans-serif;
+  margin-top: -20px;
+}
+header .showcase .content #login-form {
+  display: flex;
+}
+header .showcase .content #login-form #register-link {
+  color: white;
+  margin-top: 20px;
+  text-decoration: none;
+}
+header .showcase .content #login-form #register-link:hover {
+  color: #c2efeb;
+  background-color: rgba(0, 0, 0, 0);
+}
+header .showcase .content #register-form {
+  display: flex;
+}
+header .showcase .content #register-form .group {
+  margin-bottom: 20px;
+}
+header .showcase .content ._form {
+  flex-direction: column;
+}
+header .showcase .content ._form h2 {
+  font-size: 40px;
+  color: #ecfee8;
+  margin-bottom: 20px;
+}
+header .showcase .content ._form .group {
+  position: relative;
+  margin-bottom: 30px;
+  /* active state */
+  /* ANIMATIONS ================ */
+}
+header .showcase .content ._form .group input {
+  font-size: 18px;
+  padding: 10px 10px 10px 10px;
+  border: none;
+  color: #ecfee8;
+  border-bottom: 1px solid #757575;
+  background-color: #331e36;
+  display: block;
+  width: 300px;
+}
+header .showcase .content ._form .group input:focus {
+  outline: none;
+}
+header .showcase .content ._form .group .bar:before, header .showcase .content ._form .group .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #c2efeb;
+  transition: 0.2 ease all;
+}
+header .showcase .content ._form .group .bar:before {
+  left: 50%;
+}
+header .showcase .content ._form .group .bar:after {
+  right: 50%;
+}
+header .showcase .content ._form .group input:focus ~ .bar:before, header .showcase .content ._form .group input:focus ~ .bar:after {
+  width: 50%;
+}
+header .showcase .content ._form .group .highlight {
+  position: absolute;
+  height: 80%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+header .showcase .content ._form .group input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
 @-webkit-keyframes inputHighlighter {
   from {
     background: #5264AE;
