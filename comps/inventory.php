@@ -10,21 +10,21 @@
     }
     else
     {
-         $sql = "SELECT * FROM inventory";
-         $result = $connection->query($sql);
-         if ($result->num_rows > 0) 
-         {
-             while($row = $result->fetch_assoc()) 
-             {
-                 array_push($inventory, $row);
-             }
-         }
-         else 
-         {
-             echo "0 results";
-         }
-     }
-     $connection->close();
+        $sql = "SELECT * FROM inventory";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) 
+        {
+            while($row = $result->fetch_assoc()) 
+            {
+                array_push($inventory, $row);
+            }
+        }
+        else 
+        {
+            echo "0 results";
+        }
+    }
+    $connection->close();
 
     
 
