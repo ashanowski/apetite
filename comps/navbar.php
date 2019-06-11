@@ -7,7 +7,7 @@
     <?php if (isset($_SESSION['logged']) && $_SESSION['logged'] == true): ?>
     <li><a>Konto<span class="arrow">&#x25BC;</span></a>
       <ul class="submenu">
-        <li><a href="#">Ustawienia</a></li>
+        <li><a href="#">Koszyk</a></li>
         <li><a href="php/logout.php">Wyloguj się</a></li>
       </ul>
     </li>
