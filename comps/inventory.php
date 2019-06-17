@@ -30,18 +30,29 @@
      * ------- BASKET ADDING ITEMS
      */
 
-    if (!isset($_SESSION['basket'])) {
-        $_SESSION['basket'] = [];
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = [];
     }
 
     if (isset($_POST['quantity']) && !empty($_POST['quantity'])) {
 
-        $order = (object) [
-                'id' => $_POST['id'],
-                'quantity' => $_POST['quantity']
-        ];
+        $found = False;
 
-        array_push($_SESSION['basket'], $order);
+        foreach ($_SESSION['cart'] as $item => $value) {
+            if ($_POST['id'] == $value->id) {
+                $value->quantity += (integer) $_POST['quantity'];
+                $found = True;
+            }
+        }
+
+        if (!$found){
+            $order = (object) [
+                    'id' => $_POST['id'],
+                    'quantity' => $_POST['quantity']
+            ];
+            array_push($_SESSION['cart'], $order);
+        } 
+
 
     }
     function printShop($name, $weight, $price, $image, $id)
@@ -60,49 +71,72 @@
                         <h4 class='item-price'>$price.00zł</h4>
                         <form method='post'>
                             <input type='hidden' name='id' value='$id'>
-                            <label for='quantity'>Ilość zamówienia:</label>
-                            <input type='number' name='quantity'> 
+                            <label for='quantity'>Ilość sztuk:</label>
+                            <input type='number' name='quantity' size=2> 
                             <button class='item-add'>Dodaj do koszyka</button>
                         </form>               
                     </div>
                 </div>
             </div>";
     }
-
-    //foreach($inventory as $item)
-    //{
-    //    printShop($item["name"], $item["weight"], $item["price"], $item["image_ref"]);
-    //}
-    //printShop();
-    //printShop();
     ?>
-<!--
 <div class="inventory">
-    <div class="item">
-
-        <div class="item-name">
-            <h2>Royal Canin Size</h2>
-        </div>
-
-        <div class="item-details">
-            <div class="item-image">
-                <img src="assets/example_image.jpg" alt="">
-            </div>
-            <div class="item-desc">
-                <p class="item-weight">18kg</p>
-                <h4 class="item-price">180.00zł</h4>
-                <button class="item-add">Dodaj do koszyka</button>
-            </div>
-        </div>
-    </div>
-</div>
--->
-<div class="inventory">
-    <section class="basket">
-        <h1>Koszyk:</h1>
+    <section class="cart">
         <br>
-        <?php foreach ($_SESSION['basket'] as $item => $value) {
-            echo 'ID: '.$value->id.', ilość: '.$value->quantity,'<br>';
+        <?php
+        if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+            echo '<h1>Koszyk:</h1>';
+            ?>
+            <table class="minimalistBlack">
+                <thead>
+                    <tr>
+                        <th>Nazwa</th>
+                        <th>Ilość</th>
+                        <th>Cena za sztukę</th>
+                        <th>Cena za całość</th>
+                        <th>Usuń z koszyka</th>
+                    </tr>
+                </thead>
+                <tbody>
+            <?php
+        $sum_price = 0;
+        $sum_quantity = 0;
+        foreach($inventory as $item)
+            {
+                foreach($_SESSION['cart'] as $cart_item => $cart_value) {
+                    if($cart_value->id == $item['id'])
+                    {
+                        $price_quant = (float)$item['price'] * (integer)$cart_value->quantity;
+                        $sum_price += $price_quant;
+                        $sum_quantity += $cart_value->quantity;
+                        ?>
+                        <tr>
+                            <td><?php echo $item['name']?></td>
+                            <td><?php echo $cart_value->quantity?></td>
+                            <td><?php echo $item['price']?></td>
+                            <td><?php echo $price_quant;?></td>
+                            <td style="text-align: center;">Usuń</td>
+                        </tr>
+                        <?php
+                    }
+                }
+            }
+            ?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Suma</td>
+                    <td><?php echo $sum_quantity ?></td>
+                    <td></td>
+                    <td><?php echo $sum_price; ?></td>
+                    <td><a href="php/clearCart.php">Wyczyść koszyk</a></td>
+                </tr>
+            </tfoot>
+            </table>
+            <?php
+
+        } else {
+            echo '<h3>Koszyk jest pusty</h3>';
         }
         ?>
     </section>
