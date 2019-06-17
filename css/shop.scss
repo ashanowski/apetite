@@ -11,11 +11,10 @@ $honeydew: #ecfee8;
   flex-direction: column;
   align-items: center;
   background-color:honeydew;
-  
 }
 .sort {
   display: flex;
-  background-color: ivory;
+  background-color: white;
   flex-direction: column;
   margin: 10px;
   width: 50%;
@@ -26,11 +25,16 @@ $honeydew: #ecfee8;
 .item {
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  //border: 1px black solid;
+  padding: 10px;
+  border: 1px black solid;
   width: 50%;
   align-items: center;
-  background-color: ivory;
+  background-color: white;
+  margin-bottom: 25px;
+
+  .item-name {
+    font-family: 'Muli', sans-serif;
+  }
 
   .item-details {
     display: flex;
@@ -38,8 +42,12 @@ $honeydew: #ecfee8;
     align-items: center;
 
     .item-image {
+      display: flex;
+      align-self: center;
+      justify-items: center;
       img {
-        width: 60%;
+        padding: 10px;
+        margin-right: 100px;
       }
     }
 
@@ -59,7 +67,15 @@ $honeydew: #ecfee8;
       button:hover {
         background-color: $turquoise;
         color: #331e36;
-    }
+      }
+      .item-quantity {
+        width: 75px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 

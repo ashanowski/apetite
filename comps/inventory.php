@@ -64,7 +64,7 @@
     
                 <div class='item-details'>
                     <div class='item-image'>
-                        <img src='assets/inv_images/$image' alt=''>
+                        <img src='assets/inv_images/$image' width='200' alt=''>
                     </div>
                     <div class='item-desc'>
                         <p class='item-weight'>$weight kg</p>
@@ -72,7 +72,7 @@
                         <form method='post'>
                             <input type='hidden' name='id' value='$id'>
                             <label for='quantity'>Ilość sztuk:</label>
-                            <input type='number' name='quantity' size=2> 
+                            <input class='item-quantity' type='number' name='quantity' size=2> 
                             <button class='item-add'>Dodaj do koszyka</button>
                         </form>               
                     </div>
@@ -115,7 +115,12 @@
                             <td><?php echo $cart_value->quantity?></td>
                             <td><?php echo $item['price']?></td>
                             <td><?php echo $price_quant;?></td>
-                            <td style="text-align: center;">Usuń</td>
+                            <td>
+                                <form method='post' action="php/removeItem.php">
+                                <input type='hidden' name='id' value="<?php echo $item['id']?>">
+                                <button class='item-add'>Usuń</button>
+                                </form>     
+                            </td>
                         </tr>
                         <?php
                     }
@@ -176,7 +181,6 @@ foreach($inventory as $item)
         {
             printShop($item["name"], $item["weight"], $item["price"], $item["image_ref"], $item['id']);
         }
-        
     }
 ?>
 </div>
