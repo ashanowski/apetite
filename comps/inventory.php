@@ -26,57 +26,125 @@
     }
     $connection->close();
 
-    
+    /*
+     * ------- BASKET ADDING ITEMS
+     */
 
-    function printShop($name, $weight, $price, $image)
-    {
-        echo '<div class="item">
-                <div class="item-name">
-                    <h2>'.$name.'</h2>
-                </div>
-    
-                <div class="item-details">
-                    <div class="item-image">
-                        <img src="assets/inv_images/'.$image.'" alt="">
-                    </div>
-                    <div class="item-desc">
-                        <p class="item-weight">'.$weight.'kg</p>
-                        <h4 class="item-price">'.$price.'.00zł</h4>
-                        <button class="item-add">Dodaj do koszyka</button>
-                    </div>
-                </div>
-            </div>';
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = [];
     }
 
-    //foreach($inventory as $item)
-    //{
-    //    printShop($item["name"], $item["weight"], $item["price"], $item["image_ref"]);
-    //}
-    //printShop();
-    //printShop();
+    if (isset($_POST['quantity']) && !empty($_POST['quantity'])) {
+
+        $found = False;
+
+        foreach ($_SESSION['cart'] as $item => $value) {
+            if ($_POST['id'] == $value->id) {
+                $value->quantity += (integer) $_POST['quantity'];
+                $found = True;
+            }
+        }
+
+        if (!$found){
+            $order = (object) [
+                    'id' => $_POST['id'],
+                    'quantity' => $_POST['quantity']
+            ];
+            array_push($_SESSION['cart'], $order);
+        } 
+
+
+    }
+    function printShop($name, $weight, $price, $image, $id)
+    {
+        echo "<div class='item'>
+                <div class='item-name'>
+                    <h2>$name</h2>
+                </div>
+    
+                <div class='item-details'>
+                    <div class='item-image'>
+                        <img src='assets/inv_images/$image' width='200' alt=''>
+                    </div>
+                    <div class='item-desc'>
+                        <p class='item-weight'>$weight kg</p>
+                        <h4 class='item-price'>$price.00zł</h4>
+                        <form method='post'>
+                            <input type='hidden' name='id' value='$id'>
+                            <label for='quantity'>Ilość sztuk:</label>
+                            <input class='item-quantity' type='number' name='quantity' size=2> 
+                            <button class='item-add'>Dodaj do koszyka</button>
+                        </form>               
+                    </div>
+                </div>
+            </div>";
+    }
     ?>
-<!--
 <div class="inventory">
-    <div class="item">
+    <section class="cart">
+        <br>
+        <?php
+        if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+            echo '<h1>Koszyk:</h1>';
+            ?>
+            <table class="minimalistBlack">
+                <thead>
+                    <tr>
+                        <th>Nazwa</th>
+                        <th>Ilość</th>
+                        <th>Cena za sztukę</th>
+                        <th>Cena za całość</th>
+                        <th>Usuń z koszyka</th>
+                    </tr>
+                </thead>
+                <tbody>
+            <?php
+        $sum_price = 0;
+        $sum_quantity = 0;
+        foreach($inventory as $item)
+            {
+                foreach($_SESSION['cart'] as $cart_item => $cart_value) {
+                    if($cart_value->id == $item['id'])
+                    {
+                        $price_quant = (float)$item['price'] * (integer)$cart_value->quantity;
+                        $sum_price += $price_quant;
+                        $sum_quantity += $cart_value->quantity;
+                        ?>
+                        <tr>
+                            <td><?php echo $item['name']?></td>
+                            <td><?php echo $cart_value->quantity?></td>
+                            <td><?php echo $item['price']?></td>
+                            <td><?php echo $price_quant;?></td>
+                            <td>
+                                <form method='post' action="php/removeItem.php">
+                                <input type='hidden' name='id' value="<?php echo $item['id']?>">
+                                <button class='item-add'>Usuń</button>
+                                </form>     
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                }
+            }
+            ?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Suma</td>
+                    <td><?php echo $sum_quantity ?></td>
+                    <td></td>
+                    <td><?php echo $sum_price; ?></td>
+                    <td><a href="php/clearCart.php">Wyczyść koszyk</a></td>
+                </tr>
+            </tfoot>
+            </table>
+            <?php
 
-        <div class="item-name">
-            <h2>Royal Canin Size</h2>
-        </div>
-
-        <div class="item-details">
-            <div class="item-image">
-                <img src="assets/example_image.jpg" alt="">
-            </div>
-            <div class="item-desc">
-                <p class="item-weight">18kg</p>
-                <h4 class="item-price">180.00zł</h4>
-                <button class="item-add">Dodaj do koszyka</button>
-            </div>
-        </div>
-    </div>
-</div>
--->
-<div class="inventory">
+        } else {
+            echo '<h3>Koszyk jest pusty</h3>';
+        }
+        ?>
+    </section>
     <div class="sort">
         <h2>Wyświetl karmy dla:</h2>
             <form method = "post">
@@ -107,13 +175,12 @@ foreach($inventory as $item)
     {
         if(isset($_POST["all"]) or count($selected_species)==0)
         {
-            printShop($item["name"], $item["weight"], $item["price"], $item["image_ref"]);
+            printShop($item["name"], $item["weight"], $item["price"], $item["image_ref"], $item['id']);
         }
         elseif(in_array($item["species"], $selected_species))
         {
-            printShop($item["name"], $item["weight"], $item["price"], $item["image_ref"]);
+            printShop($item["name"], $item["weight"], $item["price"], $item["image_ref"], $item['id']);
         }
-        
     }
 ?>
 </div>
