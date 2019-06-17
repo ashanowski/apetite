@@ -2,8 +2,8 @@
   <ul>
     <li><a href="index.php">Strona główna</a></li>
     <li><a href="shop.php">Sklep</a></li>
-    <li><a href="#">O nas</a></li>
-    <li><a href="#">Kontakt</a></li>
+    <li><a href="about.php">O nas</a></li>
+    <li><a href="contact.php">Kontakt</a></li>
     <?php if (isset($_SESSION['logged']) && $_SESSION['logged'] == true): ?>
     <li><a>Konto<span class="arrow">&#x25BC;</span></a>
       <ul class="submenu">

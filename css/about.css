@@ -1,0 +1,123 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: honeydew;
+}
+
+.intro {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-color: ivory;
+  margin: 10px;
+}
+.intro .cat {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.intro .cat img {
+  width: 444px;
+  align-self: center;
+}
+.intro .contact_form {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.intro .contact_form input[type=text] {
+  font-family: "Muli", sans-serif;
+  font-size: 13px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  resize: vertical;
+  align-self: flex-end;
+}
+.intro .contact_form textarea {
+  font-family: "Muli", sans-serif;
+  font-size: 13px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  resize: vertical;
+  align-self: flex-end;
+}
+.intro .contact_form input[type=submit] {
+  font-family: "Muli", sans-serif;
+  font-size: 13px;
+  width: 40%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  background-color: #41337a;
+  color: #ccc;
+}
+.intro #map {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  height: 400px;
+}
+.intro .contact {
+  margin-top: 10px;
+}
+.intro h2 {
+  font-family: "Muli", sans-serif;
+  margin-left: 5px;
+}
+.intro h4 {
+  font-family: "Muli", sans-serif;
+  margin-left: 5px;
+}
+.intro p {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-family: "Muli", sans-serif;
+}
+.intro .quotes {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.intro .quotes .quote {
+  font-family: "Muli", sans-serif;
+  font-style: italic;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.intro .quotes .person {
+  margin-left: 5px;
+}
+.intro .intro_photo {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.intro .intro_photo .big_photo {
+  display: flex;
+  width: 600px;
+  margin-bottom: 10px;
+}
+.intro .intro_photo .fund_photo .image {
+  border: 1px solid #021a40;
+  height: 300px;
+}
+
+/*# sourceMappingURL=about.css.map */

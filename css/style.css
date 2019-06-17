@@ -166,4 +166,8 @@ header .showcase .content ._form button:hover {
   color: #ecfee8;
 }
 
+main .about {
+  width: 50%;
+}
+
 /*# sourceMappingURL=style.css.map */
