@@ -78,9 +78,13 @@
                         <form method='post'>
                             <input type='hidden' name='id' value='$id'>
                             <label for='quantity'>Ilość sztuk:</label>
-                            <input class='item-quantity' type='number' name='quantity' value=1> 
-                            <button class='item-add' onclick='alertOnAdd()'>Dodaj do koszyka</button>
-                        </form>               
+                            <input class='item-quantity' type='number' name='quantity' value=1>";
+                            if ($_SESSION['logged'] == true){
+                                echo "<button class='item-add' onclick='alertOnAdd()'>Dodaj do koszyka</button>";
+                            } else {
+                                echo "<button class='item-add' disabled>Zaloguj się</button>";
+                            }
+                        echo "</form>               
                     </div>
                 </div>
             </div>";

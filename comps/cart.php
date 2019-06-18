@@ -111,12 +111,12 @@
                       <tr>
                           <td><?php echo $item['name']?></td>
                           <td><?php echo $cart_value->quantity?></td>
-                          <td><?php echo $item['price']?></td>
-                          <td><?php echo $price_quant;?></td>
+                          <td><?php echo $item['price']?>.00 zł</td>
+                          <td><?php echo $price_quant;?>.00 zł</td>
                           <td>
                               <form method='post' action="php/removeItem.php">
                               <input type='hidden' name='id' value="<?php echo $item['id']?>">
-                              <button class='item-add'>Usuń</button>
+                              <button>Usuń</button>
                               </form>     
                           </td>
                       </tr>
@@ -129,9 +129,9 @@
           <tfoot>
               <tr>
                   <td>Suma</td>
-                  <td><?php echo $_SESSION['sum_quantity'] ?></td>
                   <td></td>
-                  <td><?php echo $sum_price; ?></td>
+                  <td></td>
+                  <td><?php echo $sum_price; ?>.00 zł</td>
                   <td><a href="php/clearCart.php">Wyczyść koszyk</a></td>
               </tr>
           </tfoot>
@@ -143,3 +143,7 @@
       }
       ?>
 </section>
+<br>
+<?php if(count($_SESSION['cart']) > 0) {
+    echo '<button class="item-add">Przejdź do płatności</button>';
+} ?>

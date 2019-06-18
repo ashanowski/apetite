@@ -118,3 +118,19 @@ table.minimalistBlack tfoot {
 table.minimalistBlack tfoot td {
   font-size: 14px;
 }
+
+
+.item-add {
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 10px 24px;
+  border-radius: 4px;
+  color: #ecfee8;
+  background-color: #41337a;
+  border: none;
+  transition: all 0.2s;
+}
+.item-add:hover {
+  background-color: $turquoise;
+  color: #331e36;
+}

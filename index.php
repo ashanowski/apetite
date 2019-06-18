@@ -1,5 +1,8 @@
 <?php
-session_start()
+session_start();
+if (!isset($_SESSION['logged'])) {
+  $_SESSION['logged'] = false;
+}
 
 ?>
 <?php include("comps/head.html") ?>
