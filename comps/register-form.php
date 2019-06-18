@@ -1,8 +1,8 @@
 <!-- Register -->
 <form action="php/register.php" method="post" class="_form" id="register-form">
-  <h2>Zarejestruj się</h2>
+  <h2 class="animated fadeInDown">Zarejestruj się</h2>
   
-  <div class="group">
+  <div class="group animated fadeInRight">
     <input type="email"
             placeholder="E-mail"
             name="email"
@@ -11,7 +11,7 @@
     <span class="bar"></span>
   </div>
 
-  <div class="group">
+  <div class="group animated fadeInLeft">
     <input type="text"
             placeholder="Login"
             name="login"
@@ -20,7 +20,7 @@
     <span class="bar"></span>
   </div>
 
-  <div class="group">
+  <div class="group animated fadeInRight">
     <input type="password"
             placeholder="Hasło"
             name="password"
@@ -29,7 +29,7 @@
     <span class="bar"></span>
   </div>
 
-  <div class="group">
+  <div class="group animated fadeInLeft">
     <input type="password"
             placeholder="Powtórz hasło"
             name="password_repeat"
@@ -38,7 +38,7 @@
     <span class="bar"></span>
   </div>
 
-  <button type="submit">Zarejestruj</button>
+  <button type="submit" class="animated fadeInUp">Zarejestruj</button>
 </form>
 <!-- End Register -->
 

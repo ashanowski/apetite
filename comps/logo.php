@@ -1,4 +1,4 @@
 <div id="info">
-  <div class="title">Apetite</div>
-  <div class="desc">Najlepsze zwierzęce jedzenie</div>
+  <div class="title animated fadeInDown">Apetite</div>
+  <div class="desc animated fadeInUp delay-1s">Najlepsze zwierzęce jedzenie</div>
 </div>

@@ -42,7 +42,7 @@
 
                     $result->free_result();
 
-                    header('Location: ../account.php');
+                    header('Location: ../shop.php');
                 } 
                 else 
                 {

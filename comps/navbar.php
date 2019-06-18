@@ -7,7 +7,13 @@
     <?php if (isset($_SESSION['logged']) && $_SESSION['logged'] == true): ?>
     <li><a>Konto<span class="arrow">&#x25BC;</span></a>
       <ul class="submenu">
-        <li><a href="php/cart.php">Koszyk</a></li>
+        <li><a href="cart.php">Koszyk: <?php
+        if (!isset($_SESSION['sum_quantity'])) {
+          $_SESSION['sum_quantity'] = 0;
+          echo $_SESSION['sum_quantity'];
+        } else {
+          echo $_SESSION['sum_quantity'];
+        }?></a></li>
         <li><a href="php/logout.php">Wyloguj się</a></li>
       </ul>
     </li>
