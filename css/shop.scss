@@ -5,12 +5,12 @@ $airblue: #6ea4bf;
 $turquoise: #c2efeb;
 $honeydew: #ecfee8;
 
-
 .inventory {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color:honeydew;
+  min-height: 650px;
 }
 .sort {
   display: flex;
